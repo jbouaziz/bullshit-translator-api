@@ -1,0 +1,25 @@
+{
+  "name": "bullshit-translator-api",
+  "version": "1.0.0",
+  "description": "The API for the bullshit translator tools.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "type": "commonjs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbouaziz/bullshit-translator-api.git"
+  },
+  "author": "Jonathan Bouaziz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jbouaziz/bullshit-translator-api/issues"
+  },
+  "homepage": "https://github.com/jbouaziz/bullshit-translator-api#readme",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0"
+  }
+}
