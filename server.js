@@ -3,6 +3,7 @@ const express = require("express");
 const axios = require("axios");
 const app = express();
 const port = process.env.PORT || 3000;
+const maxTextLength = parseInt(process.env.MAX_TEXT_LENGTH) || 10000;
 
 // Enable CORS
 var cors = require("cors");
@@ -69,6 +70,12 @@ app.post("/translate", async (req, res) => {
 
   if (!text) {
     return res.status(400).json({ error: "Please provide a selection." });
+  }
+
+  if (text.length > maxTextLength) {
+    return res
+      .status(400)
+      .json({ error: `Text exceeds maximum length of ${maxTextLength} characters.` });
   }
 
   const customPrompt = `
